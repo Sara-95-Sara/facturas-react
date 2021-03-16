@@ -21,41 +21,39 @@ export default class InvoiceTable extends Component {
         );
       }
 
-   // const [redirect, setRedirect] = useState(false)
+    const [redirect, setRedirect] = useState(false)
 
-    //const nuevafactura = () => {
-    //    console.log("nueva factura")
-     //   setRedirect(true)
-    //}
+    const nuevafactura = () => {
+      console.log("nueva factura")
+      setRedirect(true)
+    }
     
     render() {
         return (
-            
-            <div>
-    
-                <table className="ui celled table">
-          <thead>
-            <tr>
-              <th>Numero de factura</th>
-              <th>Cliente</th>
-              <th>Importe</th>
-              <th>Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.facturas.map((factura, index) => (
-              <tr key={index}>
-                <td>{factura.id}</td>
-                <td>{factura.cliente}</td>
-                <td>{factura.importe}</td>
-                <td>{factura.fecha}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        
-        <button className="ui negative button" onClick={nuevafactura}>Nueva Factura</button>
-            </div>
+          <div>
+            {redirect && <Redirect to="/new"/>}
+            <table className="ui celled table">
+              <thead>
+                <tr>
+                  <th>Numero de factura</th>
+                  <th>Cliente</th>
+                  <th>Importe</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.facturas.map((factura, index) => (
+                  <tr key={index}>
+                    <td>{factura.id}</td>
+                    <td>{factura.cliente}</td>
+                    <td>{factura.importe}</td>
+                    <td>{factura.fecha}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <button className="ui negative button" onClick={nuevafactura}>Nueva Factura</button>
+          </div>
         );
     }
 }
