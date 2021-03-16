@@ -1,0 +1,23 @@
+{
+  "facturas": [
+    {
+      "id": 1,
+      "cliente": "pepito",
+      "importe": 143.5,
+      "fecha": "1994-11-05"
+    },
+    {
+      "id": 2,
+      "cliente": "mi cliente",
+      "importe": 143.5,
+      "fecha": "1994-11-05"
+    },
+    {
+      "id": 3,
+      "cliente": "pepito",
+      "importe": 143.5,
+      "fecha": "1994-11-05"
+    }
+  ]
+}
+  
